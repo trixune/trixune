@@ -15,6 +15,9 @@ ELSEIF (UNIX AND NOT APPLE)
     set(CMAKE_C_COMPILER /usr/bin/gcc)
     set(CMAKE_CXX_COMPILER /usr/bin/g++)
 ENDIF()
+# Static Linking
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static -static-libgcc -static-libstdc++")
+
     
 # Get project name from folder name
 get_filename_component(ProjectId ${CMAKE_CURRENT_SOURCE_DIR} NAME)
@@ -29,7 +32,14 @@ set (CMAKE_CXX_FLAGS "-g -W -pedantic")
 
 # All .cpp-files
 set(SOURCES src/main.cpp
-        src/main.hpp)
+        src/main.hpp
+        src/player.cpp
+        src/player.hpp
+        src/background.cpp
+        src/background.hpp
+        src/trixune/collision.cpp
+        src/trixune/collision.hpp
+)
 # folder with .h files, e.g. include/
 include_directories(src)
 #include_directories(src/trixune)
