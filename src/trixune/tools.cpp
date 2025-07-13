@@ -18,14 +18,14 @@ namespace trixune_tools {
 
 		ImGui::GetForegroundDrawList()->AddText(
 			nullptr, 16.0f*trixune::imScaleMult,
-			ImVec2(10.0f, 10.0f),
+			ImVec2(10.0f*trixune::imScaleMult, 10.0f*trixune::imScaleMult),
 			IM_COL32(255, 255, 0, 255),
 			fpsText
 		);
 	}
 
-	void ShowDebug(const int elements = 0) {
-		if (!debugVisible) return;
+	void ShowDebug(const int elements = 0, bool debugVisibleOverride = true) {
+		if (!debugVisibleOverride && !debugVisible) return;
 		ShowFPS();
 
 		char elementsText[64];
@@ -34,7 +34,7 @@ namespace trixune_tools {
 
 		ImGui::GetForegroundDrawList()->AddText(
 			nullptr, 16.0f*trixune::imScaleMult,
-			ImVec2(10.0f, 10.0f),
+			ImVec2(10.0f*trixune::imScaleMult, 25.0f*trixune::imScaleMult),
 			IM_COL32(255, 255, 0, 255),
 			elementsText
 		);
