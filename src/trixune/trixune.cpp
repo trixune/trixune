@@ -39,12 +39,9 @@ namespace trixune {
 	void HandleResize(const sf::Vector2u baseSize, bool scaleImGui = false, bool scaleDebugGui = true)
 	{
 		const sf::Vector2u size = window->getSize();
-		_gameView.setSize({ // Resize to fit
-			static_cast<float>(size.x),
-			static_cast<float>(size.y)
-		});
-		_gameView.setCenter(_gameView.getSize() / 2.f); //Recenter
-		window->setView(_gameView);
+		sf::View view(sf::FloatRect({0.f, 0.f}, sf::Vector2<float>(baseSize)));
+		window->setView(view);
+
 
 		float scaleX = static_cast<float>(size.x) / static_cast<float>(baseSize.x); //Calculate Scale Difference
 		float scaleY = static_cast<float>(size.y) / static_cast<float>(baseSize.y);
