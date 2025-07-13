@@ -28,7 +28,8 @@ set(CMAKE_CXX_STANDARD 17)
 set (CMAKE_CXX_FLAGS "-g -W -pedantic")
 
 # All .cpp-files
-set(SOURCES src/main.cpp)
+set(SOURCES src/main.cpp
+        src/main.hpp)
 # folder with .h files, e.g. include/
 include_directories(src)
 #include_directories(src/trixune)
