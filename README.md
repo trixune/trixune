@@ -1,5 +1,7 @@
-# TriXune
-_The Simple TriXune Game Framework_
+# TrixUne
+_The Simple TrixUne Game Framework_
+
+_TrixUne (pronounced /ˈtrɪks.juː.neɪ/ -> trigs-you-nei)_
 
 ## Note
 TriXune depends on code from:
