@@ -1,5 +1,5 @@
 # Shoutout to CMake guide: https://eliasdaler.github.io/using-cmake/
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.30) # Update to cmake 3.3
 
 IF (WIN32)
     set(CMAKE_C_COMPILER C:/msys64/mingw64/bin/gcc.exe)
@@ -33,10 +33,6 @@ set (CMAKE_CXX_FLAGS "-g -W -pedantic")
 # All .cpp-files
 set(SOURCES src/main.cpp
         src/main.hpp
-        src/player.cpp
-        src/player.hpp
-        src/background.cpp
-        src/background.hpp
         src/trixune/collision.cpp
         src/trixune/collision.hpp
 )

@@ -42,5 +42,5 @@
 
 # Build Info
 build/
-build
+cmake-build-*
 bin
